@@ -1,0 +1,26 @@
+name: 'Upload csv to bigquery'
+author: 'Ruben'
+description: 'upload csv to bigquery'
+inputs:
+  datasetId:
+    description: 'datasetId'
+    required: true
+  tableId:
+    description: 'tableId'
+    required: true
+  filename:
+    description: 'filename'
+    required: true
+  application_credentials:
+    description: 'application_credentials'
+    required: true
+  projectId:
+    description: 'projectId'
+    required: true
+
+branding:
+  icon: 'upload-cloud'
+  color: 'red'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
