@@ -10,11 +10,11 @@ LABEL "com.github.actions.color"="red"
 
 WORKDIR /home
 
-COPY . /
+COPY . /home
 
 RUN apk update \
     && apk add curl nodejs npm \
     && npm install
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["sh", "/entrypoint.sh"]
+COPY entrypoint.sh /home/entrypoint.sh
+ENTRYPOINT ["sh", "/home/entrypoint.sh"]
