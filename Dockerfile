@@ -8,6 +8,8 @@ LABEL "com.github.actions.description"="github vulnerability check"
 LABEL "com.github.actions.icon"="upload-cloud"
 LABEL "com.github.actions.color"="red"
 
+WORKDIR /home
+
 COPY . /
 
 RUN apk update \

@@ -24,5 +24,6 @@ output="INFO > UPLOADING.."
 echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
 echo "$output"
 
+cd /home
 npm install
 node index.js
