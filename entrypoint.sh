@@ -6,7 +6,7 @@ output=$(env)
 # set
 echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
 echo "$output"
-
+pwd
 output="INFO > CHECKING CREDENTIALS"
 echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
 echo "$output"
