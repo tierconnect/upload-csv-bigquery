@@ -25,5 +25,6 @@ echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
 echo "$output"
 
 cd /home
+ls
 npm install
 node index.js
