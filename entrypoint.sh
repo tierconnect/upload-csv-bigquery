@@ -2,6 +2,15 @@
 
 set -e
 
+output=$(env)
+# set
+echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
+echo "$output"
+
+output="INFO > CHECKING CREDENTIALS"
+echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
+echo "$output"
+
 # Check for creds
 if [ -z "$INPUT_APPLICATION_CREDENTIALS" ]
 then
@@ -10,6 +19,10 @@ else
 # Decode base64 key to json file
 echo "$INPUT_APPLICATION_CREDENTIALS" | base64 -d > /tmp/account.json
 fi
+
+output="INFO > UPLOADING.."
+echo "$output" > "${HOME}/${GITHUB_ACTION}.log"
+echo "$output"
 
 npm install
 node index.js
